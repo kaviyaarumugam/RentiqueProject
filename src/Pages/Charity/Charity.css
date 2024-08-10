@@ -1,0 +1,135 @@
+.charity-img img {
+    margin-top: 30px;
+    filter: blur(3px);
+    height: 420px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  }
+  
+  /*.charity-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 253, 253);
+    padding-bottom: 100px;
+    padding-right: 30px;
+  }*/
+
+  .charity-text-overlay h1{
+    font-size: 40px;
+    padding-right: 70px;
+  }
+  
+  .charity-about {
+    padding-top: 50px;
+  }
+
+  .charity-about h1{
+    font-size: 33px;
+  }
+
+  .charity-about p {
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .workflow-timeline {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .workflow-timeline h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .workflow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .workflow-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 326px;
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+    transform: scale(1);
+  }
+
+  .workflow-item:hover{
+    transform: scale(1.2);
+  }
+  
+  .workflow-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .workflow-text h3 {
+    margin: 10px 0;
+  }
+  
+  .workflow-text p {
+    font-size: 16px;
+  }
+
+  .workflow-timeline {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .ngo{
+    padding-top: 30px;
+  }
+  
+  .ngo h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .ngo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .ngo-des {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 380px;
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+    transform: scale(1);
+  }
+
+  .ngo-des img{
+    width: 250px;
+    
+  }
+
+  .ngo-des:hover {
+    transform: scale(1.1); /* Scale to original size on hover */
+  }

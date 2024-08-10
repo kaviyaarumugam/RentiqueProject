@@ -1,0 +1,260 @@
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&display=swap');
+
+.circle-cards-container {
+  --color: rgba(30, 30, 30);
+  --bgColor: rgb(255, 255, 255);
+  --goldenColor: #FFD700;
+  min-height: 70vh;
+  display: grid;
+  align-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color);
+  background: var(--bgColor);
+  
+}
+
+.circle-cards-container:hover{
+  transform: scale(1);
+}
+
+
+.circle-cards-container h1 {
+  /* text-align: center;
+  background: linear-gradient(90deg, #1f0e0a, #fed47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: black;
+}
+
+.circle-cards-list {
+  width: min(60rem, 100%);
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  counter-reset: stepnr;
+}
+
+.circle-cards-list .circle-card {
+  counter-increment: stepnr;
+  width: 18rem;
+  --borderS: 2rem;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: calc(var(--borderS) + 2rem);
+  position: relative;
+  transform: scale(0.9);
+}
+
+.circle-cards-list .circle-card:hover{
+  transform: scale(1);
+}
+
+.circle-cards-list .circle-card::before,
+.circle-cards-list .circle-card::after {
+  inset: 0;
+  position: absolute;
+  border-radius: 100%;
+  border: var(--borderS) solid var(--bgColor);
+  line-height: 2.1;
+}
+
+
+.circle-cards-list .circle-card::after {
+  content: '';
+  filter: drop-shadow(-0.25rem 0.25rem 0.0675rem rgba(0, 0, 0, 0.75)) blur(5px);
+  color: aqua;
+}
+
+.circle-cards-list .circle-card > * {
+  width: 7.5rem;
+}
+.circle-cards-list .circle-card .circle-card-icon {
+  font-size: 4.0rem;
+  color:#656565;
+  position: absolute;
+  right: calc(var(--borderS) + -0.99rem);
+  bottom: calc(var(--borderS) + 4.9rem);
+}
+
+
+.circle-cards-list .circle-card .circle-card-title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.circle-cards-list .circle-card .circle-card-description {
+  font-size: 0.8rem;
+  font-weight: 300;
+  display: flex;
+  color: rgb(18, 17, 17);
+}
+
+.circle-cards-list .circle-card .circle-card-stars {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.3rem;
+  color: #FFD700;
+}
+
+.circle-cards-list .circle-card .circle-card-stars .fa-star,
+.circle-cards-list .circle-card .fa-star-half-alt,
+.circle-cards-list .circle-card .fa-star-o {
+  color: #FFD700;
+}
+
+.circle-cards-credits {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.circle-cards-credits a {
+  color: var(--color);
+}
+
+.circle-card-1 { --accent-color: #b8df4e }
+.circle-card-2 { --accent-color: #4cbccb }
+.circle-card-3 { --accent-color: #7197d3 }
+
+
+/* .carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; 
+    margin-bottom: 40px;
+    background-color: white; 
+  }
+  
+  
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; 
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-height: 800px;
+  }
+  
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #cac7c7, #e9e7e8);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .carousel-item:hover {
+    transform: scale(1);
+    background: linear-gradient(135deg, #eceef1, #7f8180);
+  }
+  
+  
+  .customer-image {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #f0f0ee;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .customer-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  
+  .review-content {
+    background: #f3f6f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    height:160px;
+  }
+  
+  .review-content h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .review-content p {
+    color: #666;
+    font-style: italic;
+    line-height: 1.5; 
+  }
+  
+  
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .star {
+    font-size: 1.5rem;
+    color: #ddd;
+    transition: color 0.3s ease;
+  }
+  
+  .star.filled {
+    color: #e64225;
+  }
+  
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.5rem;
+  }
+  
+  .carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .carousel-button:active {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(0.9);
+  }
+  
+  .carousel-button.prev {
+    left: 20px;
+  }
+  
+  .carousel-button.next {
+    right: 20px;
+  } */
