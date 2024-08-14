@@ -89,7 +89,7 @@ function Home() {
         </div>
       </div>
       <div className='home-video'>
-          <video width="1500" autoPlay loop muted>
+          <video width="100%" autoPlay loop muted>
             <source src={offervideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>

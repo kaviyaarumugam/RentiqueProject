@@ -73,6 +73,9 @@
 
 .coupon button {
   padding: 10px 20px;
+  margin-top: 15px;
+  background-color: #ccc;
+  color: #000;
 }
 
 .cart-summary {

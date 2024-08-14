@@ -29,6 +29,8 @@ const ProductDetailExclusives = ({ onAddToCart }) => {
   const [rentalDays, setRentalDays] = useState(4);
   const [isSizeChartOpen, setIsSizeChartOpen] = useState(false);
   const [validationMessage, setValidationMessage] = useState('');
+  const [showNotification, setShowNotification] = useState(false);
+
 
   useEffect(() => {
     if (startDate && rentalDays) {
@@ -92,9 +94,11 @@ const ProductDetailExclusives = ({ onAddToCart }) => {
       };
 
       onAddToCart(item);
-      navigate('/cart'); // Navigate to the cart page
+      setShowNotification(true);  // Show the pop-up notification
+      setTimeout(() => setShowNotification(false), 3000); // Hide after 3 seconds
     }
-  };
+};
+
 
   if (!product) return <div>Product not found</div>;
 
@@ -164,7 +168,9 @@ const ProductDetailExclusives = ({ onAddToCart }) => {
           </div>
         </div>
         {validationMessage && <p className="validation-message">{validationMessage}</p>}
-        <button className="rent-now" onClick={handleRentNow}>Rent Now</button>
+        <div className="action-buttons">
+          <button className="rent-now" onClick={handleRentNow}>Rent Now</button>
+        </div>
         <p>Note: You can order this product up to 100 days in advance only.</p>
       </div>
 
@@ -218,8 +224,16 @@ const ProductDetailExclusives = ({ onAddToCart }) => {
           </div>
         </div>
       )}
+
+      {showNotification && (
+        <div className="notification-popup">
+          <p>Product added to cart successfully!</p>
+        </div>
+      )}
+      
     </div>
   );
 };
+
 
 export default ProductDetailExclusives;

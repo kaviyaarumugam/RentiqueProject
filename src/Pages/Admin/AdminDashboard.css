@@ -1,0 +1,191 @@
+.adminDashboard {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.adminSidebar {
+    width: 250px;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+}
+
+.adminSidebarHeader {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adminLogo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.adminWelcomeText {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.adminSidebarMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.adminMenuItem {
+    margin: 15px 0;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* Added padding for better spacing */
+    border-radius: 5px; /* Rounded corners for menu items */
+    transition: background-color 0.3s ease;
+}
+
+.adminMenuItem:hover {
+    background-color: #4d4d4d; /* Slightly lighter background on hover */
+}
+
+.adminDropdownArrow {
+    font-size: 14px;
+    margin-left: auto;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.adminDropdownArrow.open {
+    transform: rotate(180deg);
+    color: #1abc9c; /* Change color when dropdown is open */
+}
+
+.adminSubMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    display: none;
+    background-color: #575757;
+    border-radius: 5px; /* Rounded corners for the submenu */
+    width: 180px; /* Adjusted width for the submenu */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for a floating effect */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.adminSubMenu.show {
+    display: block;
+    opacity: 1;
+}
+
+.adminSubMenuItem {
+    padding: 0px 0px; /* Consistent padding before and after hover */
+    
+    cursor: pointer;
+    color: white;
+    text-align: center; /* Center align the text */
+    transition: background-color 0.3s ease;
+}
+
+.adminSubMenuItem:hover {
+    background-color: #1abc9c;
+    /* No change in padding here to avoid text shift */
+}
+
+.adminLogout {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-top: 1px solid #34495e;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.adminLogoutIcon,
+.adminLogoutText {
+    color: white; /* Set icon and text color to white */
+    text-decoration: none; /* Ensure no underline on text */
+    margin-left: 5px; /* Optional: add spacing between the icon and text */
+}
+
+.adminLogout a {
+    text-decoration: none; /* Ensure the Link itself has no underline */
+}
+
+.adminLogout:hover {
+    background-color: #1abc9c; /* Highlight background on hover */
+    color: white; /* Ensure text color remains readable */
+}
+
+.adminLogout:hover .adminLogoutIcon,
+.adminLogout:hover .adminLogoutText {
+    color: white; /* Ensure icon and text remain white on hover */
+}
+
+
+.adminMainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f7f6;
+}
+
+.adminHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border-bottom: 1px solid #e7e7e7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for header */
+}
+
+
+.adminHamburgerMenu {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.adminHeaderRight {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the icons and username to the right end */
+}
+
+.adminIcon {
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.adminIcon:hover {
+    color: #1abc9c; /* Change color on hover */
+}
+
+.adminUserName {
+    font-size: 16px;
+}
+
+.adminContent {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.adminContent h1 {
+    color: #333;
+}

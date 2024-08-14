@@ -5,7 +5,7 @@ import './ProductDetailMen.css';
 // Mock products data
 const products = [
   {
-    id: 1,
+    id: 14,
     name: 'Pink Sherwani',
     price: 1500,
     description: 'A classic sherwani rendered in tussar silk is elevated with intricate embroidery reminiscent of the geometry and floral.',
